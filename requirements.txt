@@ -1,0 +1,10 @@
+Flask
+Pillow
+numpy
+tflite-runtime
+tensorflow
+keras
+Markup
+jinja2
+jsonpickle
+gtts
