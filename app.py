@@ -35,11 +35,14 @@ def submit_file():
             with open("text/data.json","w") as fjson:
                         json.dump(cap,fjson)
             #flash(cap)
-            return render_template("index.html", prediction = cap, img_path = static_dir+filename)
+            return render_template("index.html", prediction = cap, img_path = "images/test.jpg")
 
 @app.route('/result')
 def sendImage():
     return send_file(static_dir+filename,mimetype='image/gif')
 
+#Insert the line below to to run on Cloud9    
+#.run(host=os.getenv('IP', '0.0.0.0'), port=int(os.getenv('PORT', 8080)))
+#end insert, place above __name__ == __main__
 if __name__ == '__main__':
-    app.run(host='0.0.0.0',port=9874)
+    app.run(host='0.0.0.0',port=8080)

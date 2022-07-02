@@ -1,7 +1,6 @@
 Flask
 Pillow
 numpy
-tflite-runtime
 tensorflow
 keras
 Markup
