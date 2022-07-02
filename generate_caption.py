@@ -45,9 +45,9 @@ def generate_desc(model, tokenizer, photo, max_length):
 	return in_text
 
 def generate_captions(photo_path):
-        tokenizer = load(open('tokenizer.pkl', 'rb'))
+        tokenizer = load(open('models/tokenizer.pkl', 'rb'))
         max_length = 36
-        model = load_model('model.h5')
+        model = load_model('models/model.h5')
         photo = extract_features(photo_path)
         description = generate_desc(model, tokenizer, photo, max_length)
         description = description[9:-6]

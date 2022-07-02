@@ -14,11 +14,11 @@ filename = "test.jpg"
 
 app.config['UPLOAD_FOLDER'] = static_dir
 
-@app.route('/')
+@app.route('/MLOpsImage/')
 def index():
     return render_template('index.html')
 
-@app.route('/', methods=['POST'])
+@app.route('/', methods=['POST', 'GET'])
 def submit_file():
     if request.method == 'POST':
         if 'file' not in request.files:
@@ -36,7 +36,8 @@ def submit_file():
                         json.dump(cap,fjson)
             #flash(cap)
             return render_template("index.html", prediction = cap, img_path = "images/test.jpg")
-
+    else:
+       return render_template('index.html')
 @app.route('/result')
 def sendImage():
     return send_file(static_dir+filename,mimetype='image/gif')
