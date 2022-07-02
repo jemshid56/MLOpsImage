@@ -6,4 +6,4 @@ keras
 Markup
 jinja2
 jsonpickle
-gtts
+gunicorn
