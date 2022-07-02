@@ -7,3 +7,4 @@ Markup
 jinja2
 jsonpickle
 gunicorn
+gtts
