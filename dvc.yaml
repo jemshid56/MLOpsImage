@@ -1,0 +1,7 @@
+stages:
+  test_model:
+    cmd: python appforhero.py
+    deps:
+    - appforhero.py
+    outs:
+    - text/data.json
